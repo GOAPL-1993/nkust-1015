@@ -6,13 +6,16 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item active"><!-- 以下的href裡的/就是代表home -->
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       @if (Route::has('login'))
         @auth
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('/dashboard') }}">Dashboard</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/logout/') }}">logout</a>
             </li>
         @else
             <li class="nav-item">

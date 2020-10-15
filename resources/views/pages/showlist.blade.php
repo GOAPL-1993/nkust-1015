@@ -1,11 +1,11 @@
 @extends('layouts.base')
 
 @section('title')
-my title
+LIST CONTENT
 @endsection
 
 @section('content')
-<h2>Hello, {{ $username }}</h2>
+<h2>LIST CONTENT</h2>
 <hr>
 @auth
 <form method=post action='/addlist/'>
@@ -29,7 +29,7 @@ my title
         @forelse ($titles as $title)
         <tr>
             <td>{{ $title->id }}</td>
-            <td><a href="/showlist/{{ $title->name }}/">{{ $title->name }}</a></td>
+            <td><a href="/showlist/{{ $title->name }}/">$title</a></td>
             @auth
             <td><a href="/delete/{{$title->id}}/">delete</a></td>
             @endif

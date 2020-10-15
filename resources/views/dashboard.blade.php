@@ -1,3 +1,11 @@
+@extends('layouts.base')
+<!-- 以上是為了要把layouts套進去整個dashboard，如此才會出現menu跟footer -->
+
+@section('title')
+會員資料專區
+@endsection
+
+@section('content')
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
@@ -13,3 +21,4 @@
         </div>
     </div>
 </x-app-layout>
+@endsection
